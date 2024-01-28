@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tunnel</title>
+    <link rel="stylesheet" href="./tunnelstyle.css">
+</head>
+<body>
+    <div id="container">
+        <div class="circle" id="circle1">
+            <div class="circle" id="circle2">
+                <div class="circle" id="circle3">
+                    <div class="circle" id="circle4">
+                        <div class="hint">
+                            그네를 타세요
+                        </div>
+                        <div class="circle" id="circle5">
+                            <div>
+                                <img src="./sky.jpg" alt="" class="sky-tunnel">
+                            <img src="./lawn.jpg" alt="" class="lawn-tunnel">
+                            <img src="./swing-tunnel.png" alt="" class="swing-tunnel">
+                            <a href="./swing.html" class="swing-tunnel-click"></a>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="black-top"></div>
+    <div class="black-bottom"></div>
+    
+    <div class="iframecontainer">
+        <iframe src="./index.html" width="600" height="400" title="External Content"></iframe>
+    </div>
+    <div class="header">
+        <a href="./index.html">첫화면으로</a>
+    </div>
+    <div class="footer"></div>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            // 스크롤 위치 계산
+            const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+
+            // 각 동그라미의 크기 계산 및 적용
+            for (let i = 1; i <= 5; i++) {
+                const circle = document.getElementById(`circle${i}`);
+                const startPercentage = (i - 1) * 10;
+                const endPercentage = i * 20 + 10;
+                const newSize = Math.min(2500, 200 + ((scrollPercentage - startPercentage) / 30 * 2400));
+                
+                if (scrollPercentage >= startPercentage && scrollPercentage <= endPercentage) {
+                    circle.style.width = newSize + 'px';
+                    circle.style.height = newSize + 'px';
+
+                    const xOffset = (newSize - 200) / 2; // 중심으로부터의 x축 이동거리
+                    const xOffsetPercentage = (xOffset / newSize) * 200; // 크기에 따른 비율 계산
+                    const translateX = xOffsetPercentage - 110; // 중심 이동
+                    circle.style.transform = `translate(-50%, -50%) translateX(${translateX}%)`;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

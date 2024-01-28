@@ -1,0 +1,484 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+@font-face {
+    font-family: 'Dongle';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108_2@1.0/Dongle-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.header {
+    position: fixed;
+    background-color: black;
+    height: 50px;
+    width: 90%;
+    top: 0;
+        font-family: 'Dongle', sans-serif;
+		font-weight: 400;
+		font-style: normal;
+        color: aliceblue;
+        font-size: 18px;
+    display: flex;
+    align-items: center;
+    text-indent: 50px;
+}
+.footer {
+    position: fixed;
+    background-color: black;
+    height: 50px;
+    width: 90%;
+    bottom: 0;
+}
+.hint {
+    position: absolute;
+    font-family: 'Dongle', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+.container {
+    background-color:white;
+    position: absolute;
+    width: 100vw;
+    height: 56.2vw;
+    overflow: hidden;
+
+    transition: filter 2s ease;
+}
+.sky {
+    position: absolute;
+    width: 100vw;
+    height: 56.2vw;
+    filter: blur(2px) brightness(180%);
+}
+.lawn {
+    position: absolute;
+    top: 31vw;
+    width: 100vw;
+    height: 56.2vw;
+    filter: blur(2px) brightness(180%);
+}
+
+
+
+
+
+
+
+.playground {
+    position: absolute;
+    width: 100vw;
+    height: 56.2vw;
+}
+
+body>a {
+    background-color: black;
+    opacity: 0%;
+    filter: blur(3vw);
+    border-radius: 50%;
+
+}
+a:hover {
+    opacity: 30%;
+}
+.climb {
+    position: absolute;
+    width: 12vw;
+    height: 14.5vw;
+    top: 50vh;
+    left: 64.5vw;
+}
+.aisle {
+    position: absolute;
+    width: 13.5vw;
+    bottom: 50vh;
+    height: 14vw;
+    left: 55vw;
+    transform: translate(0, 9%);
+}
+.tunnel {
+    position: absolute;
+    width: 15vw;
+    height: 22vw;
+    top: 49.5vh;
+    left: 37vw;
+    transform: translate(0, -45%);
+}
+.swing {
+    position: absolute;
+    width: 19.5vw;
+    height: 23vw;
+    top: 50vh;
+    left: 16vw;
+    transform: translate(0, -33.5%);
+}
+.merrygo {
+    position: absolute;
+    width: 21vw;
+    height: 8vw;
+    bottom: 50vh;
+    left: 30vw;
+    transform: translate(0, 275%);
+}
+.sign {
+    position: absolute;
+    width: 14vw;
+    height: 4.15vw;
+    font-size: 2.6vw;
+    font-family: 'Dongle';
+    /* background-color: aqua; */
+    top: 50vh;
+    right: 8vw;
+    transform: translate(0, 270%);
+    word-break: keep-all;
+    display: flex;
+    align-items: center;
+   
+}
+
+
+.iframecontainer {
+    position: fixed;
+    width: 480px;
+    height: 240px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border: black solid 1px;
+
+    bottom: 4%;
+    right: 5%;
+    z-index: 3;
+}
+
+
+
+.swing-anime {
+    position: absolute;
+    animation: swing 5s infinite cubic-bezier(0.5, 0, 0.6, 1) ;
+    overflow: hidden;
+}
+.sky-swing {
+    position: relative;
+    width: 100vw;
+    height: 120vh;
+    filter: blur(2px) brightness(180%);
+    background: url('./sky.jpg');
+    background-size: cover;
+}
+.lawn-swing {
+    position: relative;
+    width: 100vw;
+    height: 56.2vw;
+    filter: blur(2px) brightness(180%);
+}
+@keyframes swing {
+    0% {
+        top: -650px;
+    }
+    50% {
+        top: 0px;
+    }
+    100% {
+        top: -650px;
+    }
+}
+.merrygo-swing {
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(0, 480%);
+    width: 309px;
+    height: 125px;
+}
+.merrygo-swing-click {
+    background-color: black;
+    opacity: 0%;
+    filter: blur(3vw);
+    border-radius: 50%;
+}
+.hint-swing {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    left: 30vw;
+    top: 50vh;
+    transform: translate(0, 580%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.merrygo-anime {
+    position: absolute;
+    overflow: hidden;
+    animation: merrygo 1s infinite linear;
+    width: 5499px;
+    height: 56.2vw;
+}
+.lawnandsky-merrygo {
+    position: absolute;
+    filter: blur(1px) brightness(180%);
+    top: 60vh;
+    transform: translate(0, -60%);
+}
+.playground-merrygo {
+   position: absolute;
+   top: 55vh;
+   transform: translate(0, -90%);
+   left: 1500px;
+   width: 600px;
+}
+@keyframes merrygo {
+    0% {
+        left: 0;
+      }
+      100% {
+       left: -3700px;
+      }
+}
+.merrygo-anime:hover {
+    animation-play-state: paused;
+}
+.merrygo-merrygo {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.hint-merrygo {
+    position: absolute;
+   top: 50vw;
+   transform: translate(0, -47%);
+   left: 40vw;
+   width: 20px;
+   height: 300px;
+}
+.roof-merrygo {
+    position: absolute;
+    top: 50vh;
+    transform: translate(0, -240%);
+    left: 1820px;
+    width: 120px;
+    height: 140px;
+
+    background-color: black;
+    opacity: 0%;
+    filter: blur(3vw);
+    border-radius: 50%;
+}
+
+
+
+
+
+
+.climb-anime {
+    animation: climb1 7s forwards ease-in-out;
+    position: absolute;
+}
+@keyframes climb1 {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 80px;
+    }
+}
+
+.wall {
+    position: absolute;
+    height: 2000px;
+    width: 700px;
+    background-color: white;
+    border: 1px solid black;
+    left: 50vw;
+    bottom: 0;
+    transform: translate(-50%,0);
+    animation: climb2 7s forwards ease-in-out;
+}
+.hint-climb {
+    position: absolute;
+    width: 900px;
+    height: 300px;
+    left: -100px;
+    background-color: white;
+    border: 1px black solid;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+.hint-climb-click {
+    background-color: black;
+    opacity: 0%;
+    filter: blur(3vw);
+    border-radius: 50%;
+}
+@keyframes climb2 {
+    0% {
+        bottom: 0;
+    }
+    100% {
+        bottom: -1000px;
+    }
+}
+.handle {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background-color: white;
+    appearance: none;
+    border: 1px black solid;
+}
+.handle-stone {
+    position: absolute;
+    pointer-events: none;
+
+}
+.handle:nth-child(1),.handle-stone:nth-child(1) {
+    bottom: 30px;
+    left: 120px;
+}.handle:nth-child(2),.handle-stone:nth-child(2) {
+    bottom: 270px;
+    left: 300px;
+}.handle:nth-child(3),.handle-stone:nth-child(3) {
+    bottom: 510px;
+    left: 150px;
+}.handle:nth-child(4),.handle-stone:nth-child(4) {
+    bottom: 750px;
+    left: 420px;
+}.handle:nth-child(5),.handle-stone:nth-child(5) {
+    bottom: 990px;
+    left: 380px;
+}.handle:nth-child(6),.handle-stone:nth-child(6) {
+    bottom: 1230px;
+    left: 120px;
+}.handle:nth-child(7),.handle-stone:nth-child(7) {
+    bottom: 1470px;
+    left: 400px;
+}
+.handle:checked {
+    background-color: black;
+}
+
+
+
+
+
+#scroll {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+.content {
+    width: 200%; /* 가로로 스크롤될 내용의 전체 너비 */
+    height: 100%;
+    box-sizing: border-box;
+}
+.sky-aisle {
+    position: absolute;
+    z-index: 0;
+    height: 100%;
+    filter: blur(2px) brightness(180%);
+}
+.aisle-aisle {
+    position: relative;
+    height: 100%;
+}
+.tunnel-aisle {
+    position: absolute;
+    height: 51.8vw;
+    width: 51.8vw;
+    left: -25.7vw;
+    top: 50vw;
+    transform: translate(0, -97%);
+    background-color: black;
+    border-radius: 50%;
+    filter: blur(3vw);
+}
+.hint-aisle {
+    position: absolute;
+    height: 51.8vw;
+    width: 51.8vw;
+    left: 38vw;
+    top: 50vw;
+    transform: translate(0, -45%);
+}
+
+
+
+
+
+.sky-roof {
+    position: absolute;
+    height: 40vw;
+    width: 40vw;
+    border-radius: 50%;
+    overflow: hidden;
+    left: 50vw;
+    transform: translate(-50%, 0);
+    top: 2vw;
+    border: 1px black solid;
+    transition: filter 2s ease;
+}
+.clicked .sky-roof {
+    filter: brightness(20%) hue-rotate(70deg) saturate(150%);
+}
+.clicked .container {
+    filter: brightness(20%);
+}
+.sky-roof>img {
+    position: absolute;
+    animation: cloud 200s linear infinite;
+    filter: blur(2px) brightness(150%);
+    height: 130%;
+}
+@keyframes cloud {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -130%;
+    }
+}
+
+.box, .next {
+    position: absolute;
+    width: 291px;
+    height: 285px;
+    left: 20vw;
+    top: 35vw;
+}
+.next {
+    background-color: black;
+    opacity: 0;
+    filter: blur(3vw);
+    border-radius: 50%;
+}
