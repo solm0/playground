@@ -145,6 +145,33 @@ a:hover {
     left: 30vw;
     transform: translate(0, 275%);
 }
+.roof {
+    position: absolute;
+    width: 16vw;
+    height: 13vw;
+    bottom: 50vh;
+    left: 46vw;
+    transform: translate(0, -100%);
+}
+.mark {
+    position: absolute;
+    width: 13vw;
+    height: 13vw;
+    bottom: 50vh;
+    left: 48vw;
+    transform: translate(0, -100%);
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mark * {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+  
 .sign {
     position: absolute;
     width: 14vw;
@@ -158,7 +185,6 @@ a:hover {
     word-break: keep-all;
     display: flex;
     align-items: center;
-   
 }
 
 
@@ -475,6 +501,20 @@ a:hover {
     height: 285px;
     left: 20vw;
     top: 35vw;
+}
+.box {
+    animation: box 1s infinite ease-in-out;
+}
+@keyframes box {
+    0% {
+        opacity: 100%;
+    }
+    25% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 100%;
+    }
 }
 .next {
     background-color: black;

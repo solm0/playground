@@ -25,26 +25,3 @@ function wheel(name) {
 
     wheel('#scroll');
 });
-
-
-
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    var link = document.querySelector('.next');
-
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        // 클릭 이벤트에 대한 지연 효과를 부여합니다.
-        document.body.classList.add('clicked');
-        
-        // 지연 후 링크 이동
-        setTimeout(function() {
-            document.body.classList.remove('clicked');
-            // 링크 이동
-            window.location.href = link.href;
-        }, 2000); // 2초 지연
-    });
-});
